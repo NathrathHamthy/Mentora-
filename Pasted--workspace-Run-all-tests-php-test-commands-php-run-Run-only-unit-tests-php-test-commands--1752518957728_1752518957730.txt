@@ -1,0 +1,87 @@
+~/workspace$ # Run all tests
+php test_commands.php run
+
+# Run only unit tests
+php test_commands.php unit
+
+# Run only feature tests
+php test_commands.php feature
+
+# Clean up test data
+php test_commands.php cleanup
+
+# Reset database to clean state
+php test_commands.php reset
+
+Running all tests...
+
+🚀 MENTORA Test Suite
+====================
+
+
+
+
+Warning: session_start(): Session cannot be started after headers have already been sent in /home/runner/workspace/includes/auth.php on line 2
+
+🧪 MENTORA Test Suite
+==================
+
+📋 Running Unit Tests...
+❌ User Authentication
+✅ Password Hashing
+❌ File Upload Validation
+✅ Database Connection
+✅ Get Departments Function
+
+Fatal error: Uncaught Error: Call to undefined function getModules() in /home/runner/workspace/tests/TestRunner.php:153
+Stack trace:
+#0 /home/runner/workspace/tests/TestRunner.php(90): TestRunner->testGetModules()
+#1 /home/runner/workspace/tests/TestRunner.php(51): TestRunner->runTest('testGetModules', 'Get Modules Fun...')
+#2 /home/runner/workspace/tests/TestRunner.php(31): TestRunner->runUnitTests()
+#3 /home/runner/workspace/run_tests.php(25): TestRunner->runAllTests()
+#4 /home/runner/workspace/test_commands.php(17): include('/home/runner/wo...')
+#5 {main}
+  thrown in /home/runner/workspace/tests/TestRunner.php on line 153
+
+Running unit tests only...
+
+
+Warning: session_start(): Session cannot be started after headers have already been sent in /home/runner/workspace/includes/auth.php on line 2
+🧪 Running Unit Tests
+===================
+✅ User Creation
+✅ File Upload Validation
+✅ Database Queries
+✅ Password Security
+✅ Input Sanitization
+✅ Upload File Generation
+
+📊 Unit Test Results: 6 passed, 0 failed
+
+Running feature tests only...
+
+
+Warning: session_start(): Session cannot be started after headers have already been sent in /home/runner/workspace/includes/auth.php on line 2
+
+Warning: session_start(): Session cannot be started after headers have already been sent in /home/runner/workspace/tests/FeatureTests.php on line 18
+🔧 Running Feature Tests
+======================
+✅ User Login Flow
+✅ User Registration Flow
+✅ File Upload Flow
+✅ Admin Approval Flow
+✅ Search Functionality
+✅ Filter Functionality
+✅ Download Tracking
+
+📊 Feature Test Results: 7 passed, 0 failed
+
+Cleaning up test data...
+
+
+Resetting database...
+
+🔄 Resetting database to clean state...
+✅ Database reset to clean state
+~/workspace$ ^C
+~/workspace$ 
